@@ -1,6 +1,5 @@
 
 import Layout from "../layout/layout";
-import BlogList from "../component/ProductList";
 
 
 const Cart = () => {
