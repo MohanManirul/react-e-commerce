@@ -11,14 +11,13 @@ const LoginPage = () => {
 
     const handleLogin = () => {
         userLogin(email)
-        .then(data => {
-            if(data?.msg === "success"){
-                navigate(`/otp?email=${email}`) 
-            }
-
-        })
-        .catch((err) => console.log('Thera was an error'));
-    }
+            .then((data) => {
+                if (data?.msg === "success") {
+                    navigate(`/otp?email=${email}`);
+                }
+            })
+            .catch((err) => console.log("There was an error"));
+    };
 
     return (
         <Layout>
