@@ -13,7 +13,7 @@ const ProductList = () => {
 
         fetchProducts()
             .then((data) => setProduucts(data))
-            .catch((err) => console.log(err));
+            .catch((err) => setError('There was an error'));
 
     },[]) ;
 
@@ -24,7 +24,7 @@ const ProductList = () => {
     if(error){
         output = <div>There was an error</div>
     }else if(products?.length > 0 ){
-        output = products.map( (product , i) => ( <Product key={i} /> ));
+        output = products.map( (product) => ( <Product key={product.id} product={product} /> ));
     }else{
         <div>No product found</div>
     }
