@@ -32,7 +32,7 @@ const ProductList = () => {
     return (
         <Layout>
             <h3>I'm from home page</h3>
-            
+         
            { output }
               
         </Layout>

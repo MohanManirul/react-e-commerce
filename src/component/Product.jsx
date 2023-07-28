@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Product = () => {
     return (
         <div className="row">
-           
+        
             <div className="col-md-4">
                     <Link to={'/details'} className="card cardPadding">
                         
