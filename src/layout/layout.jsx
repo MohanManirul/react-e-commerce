@@ -11,9 +11,6 @@ const Layout = (props) => {
                             <Link to={'/'}>Product</Link>
                         </li>
                         <li  className="list">
-                            <Link to={'/cart'}>Cart</Link>
-                        </li>
-                        <li  className="list">
 
                         <Link className="gitLink" to={'https://github.com/MohanManirul/react_blog_template_mastering'}>Git Link</Link>
                         </li>
@@ -24,6 +21,9 @@ const Layout = (props) => {
 
                 <div className="col-md-4">
                     <ul className="listDisplay">
+                        <li className="list">
+                            <Link to={'/cart-list'}>Cart</Link>
+                        </li>
                         <li className="list">
                             <Link to={'/login'}>Login</Link>
                         </li>
