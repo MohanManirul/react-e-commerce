@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Cart from './pages/Cart';
 import ProductDetails from "./component/ProductDetails";
-import Login from "./pages/Login";
 import Otp from "./pages/Otp";
 import ProductList from "./pages/ProductList";
+import LoginPage from "./pages/LoginPage";
 
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
               <Route path="/"  element={<ProductList />}/>
               <Route path="/cart"  element={<Cart />}/>
               <Route path="/product-details"  element={<ProductDetails />}/>
-              <Route path="/login"  element={<Login />}/>
+              <Route path="/login"  element={<LoginPage />}/>
               <Route path="/otp"  element={<Otp />}/>
           </Routes>
         </BrowserRouter>
