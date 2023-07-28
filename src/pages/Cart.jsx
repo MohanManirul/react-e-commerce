@@ -4,6 +4,7 @@ import CartItem from "../component/CartItem";
 import Layout from "../layout/layout";
 import fetchCart from "../utils/fetchCart";
 import removeCart from "../utils/removeCarrt";
+import convertPriceStringToNumber from "../utils/convertPriceStringToNumber";
 
 
 const Cart = () => {
@@ -19,6 +20,7 @@ const Cart = () => {
         .catch((err) => console.log("There was an error"))
     },[]);
 
+    // remove cart item
     const handleRemoveCart = (productId) => {
         removeCart(productId)
         .then((data) => {
@@ -29,6 +31,15 @@ const Cart = () => {
             }
         })
         .catch((err) => console.log('There was an error'));
+    }
+
+    // calculate total price
+    const calculateTotalPrice = () =>{
+        const totalPrice = items.reduce((total, currentValue) =>{
+            const price = convertPriceStringToNumber(currentValue);
+            return total + price;
+        },0);
+        return totalPrice.toLocaleString();
     }
 
     return (
@@ -46,8 +57,8 @@ const Cart = () => {
             <div className="col-md-4 divRight">
                 <dv className="row">
                     <div className="card cardPadding">
-                        Total Item : 10 pcs <br />
-                        Total Price : 1000 tk
+                        Total Item : {items.length} pcs <br />
+                        Total Price : {calculateTotalPrice()} tk
                     </div>
                     <button className="btn btn-success">checkout</button>
                 </dv>
