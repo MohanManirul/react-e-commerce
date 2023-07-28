@@ -14,8 +14,7 @@ const OtpPage = () => {
         verifyLogin(email, pin)
         .then(data => {
             if(data?.msg === "success"){
-                localStorage.setItem("token", data.data);
-                console.log(data)
+                localStorage.setItem("token", data.data);              
                 navigate('/');
             }
         })

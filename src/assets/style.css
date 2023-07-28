@@ -59,3 +59,8 @@ ul li{
   .text-no-underline{
     text-decoration: none;
   }
+  .productDiv{
+    border: 1px solid #0f0038;
+    border-radius: 5px solid #eee;
+    margin: 2px;
+  }
