@@ -1,5 +1,5 @@
-export default function CartItem({product }){
-    const { title , image, price ,short_des } = product || {} ;
+export default function CartItem({ product , remove}){
+    const { title , image, price ,short_des ,id } = product || {} ;
     return(
         <div className="col-md-7">
               
@@ -14,7 +14,7 @@ export default function CartItem({product }){
                             <h6>{title}</h6>
                             <h3>Price : ${price}</h3>
                             <p>{short_des}</p>
-                            <button className="btn btn-warning float-end">remove</button>
+                            <button className="btn btn-warning float-end" onClick={()=> remove(id)}>remove</button>
                         </div>                  
                         </div>                          
                         
